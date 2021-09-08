@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :microposts # micropostsコントローラーを参照
+  resources :users # userコントローラーを参照
+  root 'users#index' # indexアクションを実行することで「/」でトップページに遷移する
 end
